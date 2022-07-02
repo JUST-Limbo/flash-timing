@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      width: 500px;
+      height: 500px;
+      overflow: scroll;
+      border-bottom: 50px solid black;
+      background: pink;
+    }
+    .son {
+      height: 800px;
+      width: 400px;
+      background: lightgreen;
+    }
+    .son2{
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background: red;
+    }
+  </style>
+</head>
+
+<!--
+  这里如果父元素给overflow:scroll;不给相对定位
+  子元素给绝对定位
+  son2在页面上的效果让人感到诧异？它出现在滚动区域外，能被看到，并且从图层上去看，他在son元素的下方。
+  手动拖滚动条，son2并不会跟随移动
+ -->
+<body>
+  <div class="father">
+    <div class="son"></div>
+    <div class="son2"></div>
+  </div>
+</body>
+
+</html>

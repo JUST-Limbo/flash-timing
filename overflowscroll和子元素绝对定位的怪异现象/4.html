@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      height: 500px;
+      width: 500px;
+      overflow: hidden;
+      position: relative;
+      background: pink;
+      border-bottom: 10px solid black;
+    }
+
+    .son {
+      height: 100px;
+      width: 100px;
+      background: lightblue;
+      position: absolute;
+      right: -150px;
+      bottom: -150px;
+    }
+
+    .son2 {
+      height: 100px;
+      width: 100px;
+      background: green;
+      position: absolute;
+      left: 0;
+      bottom:-200px;
+    }
+  </style>
+</head>
+
+<!--
+  给父元素overflow:hidden;position:relative;
+  子元素绝对定位
+  溢出内容被全部隐藏，符合预期
+ -->
+<body>
+  <div class="father">
+    <div class="son"></div>
+    <div class="son2"></div>
+  </div>
+</body>
+
+</html>

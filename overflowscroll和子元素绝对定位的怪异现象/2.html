@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .father {
+      height: 500px;
+      width: 500px;
+      position: relative;
+      background: pink;
+      border-bottom: 10px solid black;
+    }
+
+    .son {
+      height: 100px;
+      width: 100px;
+      background: lightblue;
+      position: absolute;
+      right: -150px;
+      bottom: -150px;
+    }
+  </style>
+</head>
+<!--
+  如果给父元素position:relative;但是不给overflow:scroll;
+  子元素给绝对定位
+  子元素能脱离父元素进行布局，不会被滚动条约束
+  符合预期
+ -->
+<body>
+  <div class="father">
+    <div class="son"></div>
+    <div>123</div>
+  </div>
+</body>
+
+</html>
